@@ -101,3 +101,6 @@ RUN apt-get clean \
 	&& rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /var/log/*
 
 # vim: set tabstop=4 shiftwidth=4:
+
+# Custom
+RUN echo "hello world from ubuntu 18.04" > /root/helloworld

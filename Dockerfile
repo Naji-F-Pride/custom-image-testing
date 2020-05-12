@@ -82,8 +82,8 @@ RUN apt-get -q update && \
 RUN apt-get -q update && \
 	apt-get -y -qq upgrade && \
 	apt-get -y -qq install \
-	linux-image-4.15.0-33-generic \
-	linux-modules-extra-4.15.0-33-generic
+	linux-image-4.15.0-50-generic \
+	linux-modules-extra-4.15.0-50-generic
 
 # Configure locales
 RUN locale-gen en_US.UTF-8 && \
@@ -101,6 +101,3 @@ RUN apt-get clean \
 	&& rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /var/log/*
 
 # vim: set tabstop=4 shiftwidth=4:
-
-# Custom changes.
-RUN echo "hello world" > /root/helloworld
